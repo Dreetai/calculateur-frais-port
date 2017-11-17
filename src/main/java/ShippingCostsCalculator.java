@@ -1,13 +1,13 @@
 public class ShippingCostsCalculator {
 
     public enum Destination{FR, MC};
-    private static final double FRAIS_SMALL_PACKAGE = 12;
-    private static final double FRAIS_SMALL_WEIGHT = 17.59;
-    private static final double FRAIS_FIXES = 2.86;
-    private static final double FRAIS_HIGH_WEIGHT = 21.62;
-    private static final double FRAIS_HIGH_PACKAGE = 1.43;
-    private static final double POURCENTAGE_FR = 1;
-    private static final double POURCENTAGE_MC = 1.087;
+    public static final double FRAIS_SMALL_PACKAGE = 12;
+    public static final double FRAIS_SMALL_WEIGHT = 17.59;
+    public static final double FRAIS_FIXES = 2.86;
+    public static final double FRAIS_HIGH_WEIGHT = 21.62;
+    public static final double FRAIS_HIGH_PACKAGE = 1.43;
+    public static final double POURCENTAGE_FR = 1;
+    public static final double POURCENTAGE_MC = 1.087;
 
     public static double calculateShippingCost(Package pack, Destination destination){
         double cost = 0;

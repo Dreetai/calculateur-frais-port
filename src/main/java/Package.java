@@ -1,14 +1,14 @@
 
-public class Package {
+public abstract class Package {
 
     private int height;
     private int width;
     private int depth;
     private double weight;
-    private final int LIMIT_HEIGHT = 229;
-    private final int LIMIT_WIDTH = 162;
-    private final int LIMIT_DEPTH = 25;
-    private final double LIMIT_WEIGHT = 1.8d;
+    public static final int LIMIT_HEIGHT = 229;
+    public static final int LIMIT_WIDTH = 162;
+    public static final int LIMIT_DEPTH = 25;
+    public static final double LIMIT_WEIGHT = 1.8d;
 
 
     public Package(int height, int width, int depth, double weight) {
@@ -18,16 +18,7 @@ public class Package {
         this.weight = weight;
     }
 
-
-    public double calculateShippingCost(ShippingCostsCalculator.Destination destination){
-        return ShippingCostsCalculator.calculateShippingCost(this, destination);
-    }
-
-    public double calculateLocalShippingCost(){
-
-        return ShippingCostsCalculator.calculateShippingCost(this, ShippingCostsCalculator.Destination.FR);
-
-    }
+    public abstract double calculateLocalShippingCost();
 
     public double getWeight(){
         return this.weight;
